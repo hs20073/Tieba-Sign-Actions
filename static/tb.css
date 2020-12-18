@@ -1,0 +1,60 @@
+.d_badge_icon1 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s1_cfca9f7.gif) no-repeat;
+    padding-top: 2px;
+    margin-top: 1px
+}
+
+.d_badge_icon2 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s2_1d1b36a.gif) no-repeat;
+    padding-top: 3px
+}
+
+.d_badge_icon2_1 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s3_ad6bdc8.gif) no-repeat;
+    padding-top: 3px
+}
+
+.d_badge_icon2_2 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s4_27f75de.gif) no-repeat;
+    padding-top: 3px
+}
+
+.d_badge_icon3 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s5_04ee53b.gif) no-repeat;
+    padding-left: 4px;
+    margin-top: 2px
+}
+
+.d_badge_icon3_1 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s6_f21bdf5.gif) no-repeat;
+    padding-left: 4px;
+    margin-top: 2px
+}
+
+.d_badge_icon3_2 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s7_ffd927c.gif) no-repeat;
+    padding-left: 4px;
+    margin-top: 2px
+}
+
+.d_badge_icon4 .d_badge_lv {
+    background: url(//tb2.bdstatic.com/tb/static-user/widget/pb_author/images/s8_ab1dc3e.gif) no-repeat;
+    top: -3px;
+    padding-left: 6px;
+    padding-top: 7px
+}
+.d_badge_bright .d_badge_lv {
+    left: 67px;
+    margin-top: 2px;
+}
+.d_badge_lv {
+    color: #B65E00;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 8px;
+    width: 25px;
+    height: 25px;
+    line-height: 18px;
+    font-family: arial;
+}

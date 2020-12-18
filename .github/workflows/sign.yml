@@ -1,0 +1,34 @@
+name: Actions-Sign
+on:
+  schedule:
+    - cron: 0 4,14,16 * * *
+  watch:
+    types: [started]
+jobs:
+  build:
+    strategy:
+      matrix:
+        go-version: [1.14.x]
+        platform: [ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go-version }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Sign
+        env:
+          BDUSS: ${{ secrets.BDUSS }}
+          TELEGRAM_APITOKEN: ${{ secrets.TELEGRAM_APITOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          OWNER_REPO: ${{ secrets.OWNER_REPO }}
+          REPLY: ${{ secrets.REPLY }}
+          AUTH_AES_KEY: ${{ secrets.AUTH_AES_KEY }}
+          HOME_URL: ${{ secrets.HOME_URL }}
+          SCKEY: ${{ secrets.SCKEY }}
+          NOTIFY_COUNT: ${{ secrets.NOTIFY_COUNT }}
+        run: go run main.go -cronType si
