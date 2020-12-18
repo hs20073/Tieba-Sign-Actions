@@ -1,0 +1,32 @@
+name: merge-from-master
+on:
+  schedule:
+    - cron: '1 0-15/3 * * *'
+  workflow_dispatch:
+jobs:
+  merge-branch:
+    env:
+      PAT: ${{ secrets.PAT }}
+    runs-on: ubuntu-latest
+    steps:  
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          
+      - name: sync lxk0301-scripts
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/libsgh/Tieba-Sign-Actions.git"
+          source_branch: "master"
+          destination_branch: "master"
+          github_token: ${{ secrets.PAT }}
+
+      - name: Merge main from master	
+        uses: devmasx/merge-branch@v1.3.1	
+        if: env.PAT	
+        with:	
+          type: now	
+          from_branch: master	
+          target_branch: main	
+          github_token: ${{ secrets.PAT }}
